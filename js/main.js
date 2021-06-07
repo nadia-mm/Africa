@@ -7,8 +7,7 @@ async function searchCountries() {
     resultId.innerHTML = "";
 
     let response = await fetch(allAfricanCountriesURL);
-    let reply = await fetch(response.url);
-    let countries = await reply.json()
+    let countries = await response.json()
         .then((data) => {
             displayCountries(data);
         })
